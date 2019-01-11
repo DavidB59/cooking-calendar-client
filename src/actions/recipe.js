@@ -27,3 +27,28 @@ export const changeRecipe = (recipeId, dayId ,jwt ) => (getState) => {
         .set('Authorization', `Bearer ${jwt}`)
         .catch(console.error)
 }
+
+
+export const addIngredient = (data) => (dispatch) => {
+
+    request
+        .post(`${baseUrl}/ingredients`)
+        .send(data)
+        .then(response => {
+         dispatch(recipeCreated(response.body))
+            console.log(response)
+        })
+        .catch(console.error)
+}
+
+export const addUnit = (data) => (dispatch) => {
+
+    request
+        .post(`${baseUrl}/units`)
+        .send(data)
+        .then(response => {
+         dispatch(recipeCreated(response.body))
+            console.log(response)
+        })
+        .catch(console.error)
+}

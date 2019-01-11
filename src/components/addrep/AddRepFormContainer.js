@@ -2,6 +2,8 @@ import React from 'react'
 import { AddRepForm } from './AddRepForm'
 import { connect } from 'react-redux'
 import { createRecipe } from '../../actions/recipe'
+import AddIngredientContainer from './AddIngredientContainer';
+import AddUnitContainer from './AddUnitContainer';
 
 class AddRepFormContainer extends React.Component {
     state= {
@@ -28,7 +30,6 @@ class AddRepFormContainer extends React.Component {
   onSubmit = () => {
     // event.preventDefault()
     this.props.createRecipe(this.state)
-    console.log(this.state)
   }
 
   onChange2 = (event,i) => {
@@ -59,6 +60,9 @@ class AddRepFormContainer extends React.Component {
       onChangeNumber={this.onChangeNumber}
       />
       <p style={{color:"red"}}>{this.props.error}</p>
+
+      <AddIngredientContainer></AddIngredientContainer>
+      <AddUnitContainer></AddUnitContainer>
     </div>)
   }
 }
@@ -69,25 +73,4 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, { createRecipe })(AddRepFormContainer)
-    //state= {
-      //       // recipe entity
-      //       name :'test',
-      //       // image :'',
-      //       // cookingTime :0 ,
-      //       // instructions :'',
-      //       // diffLevel : '',
-      //       // season :'',
-      //       // dietary: '',
-      //       // // ingredients ID
-      //       //  ingredient : [],
-      //       // //ingredient,
-      
-      //       // // units ID 
-      //       //  unit:[],
-      //       // //unit,
-      
-      //       // // recipesIngredient
-      //       // recipeIngredients : []
-      //       // //quantity,
-      //     } 
-    
+
