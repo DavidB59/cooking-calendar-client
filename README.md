@@ -1,3 +1,5 @@
+# Cooking-calendar-client
+
 Full stack team project using JavaScript, React and Redux for front end.
 
 Description of the project : 
