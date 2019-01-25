@@ -2,7 +2,7 @@
 
 Full stack team project using JavaScript, React and Redux for front end.
 
-[MVP Demo](https://loized.com/img/meal/video_meal.gif)
+[MVP Demo](video_meal.gif)
 
 Description of the project : 
 Weekly calendar with one recipe per day taken randomly from the database.
